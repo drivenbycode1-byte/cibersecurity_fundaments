@@ -4,11 +4,22 @@
     <head></head>
     <body>
         <p>YouTube Subscribe Button</p>
+        <button onclick="subscribe();" class="js_subcribe_button">Subscribe</button>
+
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order" class="js_cost_input">    
+
         <button onclick="
-                subscribe();
-            " class="js_subcribe_button">Subscribe</button>
+                calculate_total()
+            ">Calculator</button>
 
         <script>
+            function calculate_total() {
+                const input_element = document.querySelector('.js_cost_input');
+                input_element.value
+            }
+
+
             function subscribe() {
                 let button_element = document.querySelector('.js_subcribe_button'); //Seleccionamos el botón exacto que es subscribe
 
@@ -19,7 +30,7 @@
                 }
             }
 
-            // Aquí lo importante es que no mezclamos JS con HTM. Esto lo logramos al hacer la función.
+            // Aquí lo importante es que no mezclamos JS con HTML. Esto lo logramos al hacer la función.
 
         </script> 
     </body>

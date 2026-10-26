@@ -139,4 +139,12 @@ Another Built-in Object
 Los document object representan modelos de webpages.
 Cuando un elemento HTML está dentro de un un lenguaje JS, el elemento html se convierte en JS = console.log(document.body)
 El bosy es HTML, pero está dentro de un variable de JS mediandte el objeto document.body
+Cosdas importantes:
+-querySlection sirve para que las varibals se vayan modificando en la página. Rercordar que se usa con innerHTML para modificar la información del
+elemento seleccionado.
+-También imporatan que cuando suame el query, los conectamos al elemento que designaremos en su class. Esa variable designada en la class
+siempre va con un opunto al principio porque es un  método document.querySelection(.perro_azul)
+<input> lo usamos para textbox
+Dentro del textbox, cuando hay  letras grises, se llaman Place Holder (Marcador de posición)
+.value = para obtener el texto que se escribe en el TextBox
 
