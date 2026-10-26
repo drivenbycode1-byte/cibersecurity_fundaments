@@ -83,3 +83,4 @@ DOM
 - document.body.innerHTML
 - document.title
 - document.querySelector()
+- innerText
