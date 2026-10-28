@@ -95,7 +95,6 @@ DOM
 - input onkeyup=""
 
 === DOM with CSS, HTML & JS ===
-
 - <style></style>
 - .classList.add
 - .classList.remove
@@ -106,3 +105,5 @@ DOM
 - src=""
 - <link>
 - <input>
+
+=== Arrays and Loops ===

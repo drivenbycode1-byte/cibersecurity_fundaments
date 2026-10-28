@@ -159,3 +159,7 @@ TEnemos windos.document, windos.console.log, windows.alert ==> PEERO windowsa se
 
 CSS slector = lo que pasa aquí es que seleccionamos, dentro de <style></style> que elementos queremos estilizar
 classList = control absoluto de del atributo clase
+
+
+=== Arrays and Loops ===
+
