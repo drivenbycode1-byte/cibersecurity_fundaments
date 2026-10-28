@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Proyects</title>
+        <link rel="stylesheet" href="lesson_10c.css">
+
+    </head>
+    <body>
+        <p>YouTube Subscribe Button</p>
+        <button onclick="subscribe();" class="js_subcribe_button subscribe_button">Subscribe</button>
+
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order" class="js_cost_input cost_input" onkeydown="
+                handle_cost_key_down(event)">    
+
+        <button onclick="calculate_total()" class="calculate_button">Calculate</button>
+        <p class="js_total_cost"></p>
+
+        <script src="lesson_10c.js"></script> 
+    </body>
+</html>

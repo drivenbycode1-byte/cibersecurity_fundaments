@@ -104,3 +104,5 @@ DOM
 - margin
 - <img>
 - src=""
+- <link>
+- <input>
