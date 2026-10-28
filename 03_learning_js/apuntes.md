@@ -153,3 +153,9 @@ click, keydowns = events
 event = dentro d un console.log nos muestra las teclas que el usuario presiona
 document.  object representa la webpage y la windows. object representa el buscador. 
 TEnemos windos.document, windos.console.log, windows.alert ==> PEERO windowsa se agrega automáticamente en JavaScript
+
+
+=== DOM with CSS, HTML & JS ===
+
+CSS slector = lo que pasa aquí es que seleccionamos, dentro de <style></style> que elementos queremos estilizar
+classList = control absoluto de del atributo clase

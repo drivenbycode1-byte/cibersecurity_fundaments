@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Proyects</title>
+        <style>
+            body {
+                font-family: Arial;
+            }
+            
+            .subscribe_button {
+                border: none;
+                background-color: black;
+                color: white;
+                padding-top: 10px;   /*Padding es el acto de dejar espacio dentro del botón*/
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-weight: bold; /*Use it for style of letters*/
+                border-radius: 20px;
+                cursor: pointer; /*Convert en hand-pointer icon*/
+                margin-bottom: 30px;
+            }
+
+            .is_subscribe{ /*al poner estos estilos abajo, sobresecriben a los de arriba*/
+                background-color: rgb(240, 240, 240);
+                color: black;
+            }
+
+            .cost_input {
+                font-size: 15px;
+                padding: 10px;
+            }
+
+            .calculate_button {
+                background: green;
+                color: white;
+                border: none;
+                font-size: 15px;
+                padding: 10px 15px; /*el primero es vertical, el segundo horizontal*/
+                cursor: pointer;
+            }
+
+
+            
+        </style>
+    </head>
+    <body>
+        <p>YouTube Subscribe Button</p>
+        <button onclick="subscribe();" class="js_subcribe_button subscribe_button">Subscribe</button>
+        <!--para agregar nueva clase que no ha sido usada, seguimos con la variable class="", solo que esta vez, dentro, al ya tener botón, le damos unespacio y agregamos otra clase dentro-->
+
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order" class="js_cost_input cost_input" onkeydown="
+                handle_cost_key_down(event)
+            ">    
+
+        <button onclick="
+                calculate_total()
+            " class="calculate_button">Calculate</button>
+        <p class="js_total_cost"></p>
+
+        <script>
+            function handle_cost_key_down(event) {
+                if (event.key === 'Enter') {
+                    calculate_total();
+                }
+            }
+
+            function calculate_total() {
+                const input_element = document.querySelector('.js_cost_input');
+                let cost = Number(input_element.value); // Como obntengamos un valor de un DOM, el valor será simepre string, por lo que debemos convertirlo
+
+                if (cost < 40) {
+                    cost = cost + 10;
+                };
+
+                document.querySelector('.js_total_cost').innerHTML = `$${cost}`;
+            }
+
+
+            function subscribe() {
+                let button_element = document.querySelector('.js_subcribe_button'); //Seleccionamos el botón exacto que es subscribe
+
+                if(button_element.innerHTML === 'Subscribe') {  // innerHTML solo selecciona lo que está exacto en el botón, pero qué pasa sin hay un espacio ' '
+                    button_element.innerHTML = 'Subscribed';
+                    button_element.classList.add('is_subscribe') //classLsit es un objeto, y uno de sus emtods es add, que adhiere una clase a un elemento, en este caso adherimos is_subscribe
+                } else {                                        // Si hay espaco ocupamos el innerText para usar exactamente lo que queremos
+                    button_element.innerHTML = 'Subscribe';
+                    button_element.classList.remove('is_subscribe')
+                }
+            }
+
+            // Aquí lo importante es que no mezclamos JS con HTML. Esto lo logramos al hacer la función.
+
+        </script> 
+    </body>
+</html>

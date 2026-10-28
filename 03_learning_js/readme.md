@@ -93,3 +93,14 @@ DOM
 - window.
 - .toFixed(2)
 - input onkeyup=""
+
+=== DOM with CSS, HTML & JS ===
+
+- <style></style>
+- .classList.add
+- .classList.remove
+- body
+- padding
+- margin
+- <img>
+- src=""
