@@ -147,4 +147,4 @@ siempre va con un opunto al principio porque es un  método document.querySelect
 <input> lo usamos para textbox
 Dentro del textbox, cuando hay  letras grises, se llaman Place Holder (Marcador de posición)
 .value = para obtener el texto que se escribe en el TextBox
-
+Number() = funci'n que coinvierte un string en un número
