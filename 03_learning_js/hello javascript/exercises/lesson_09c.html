@@ -1,0 +1,64 @@
+<!--9i. We'll improve the Cart Quantity project.
+. Make a copy of exercise 7l (see the solution for 7l if needed).
+. Create a paragraph (<p></p>) to display the quantity.
+. Whenever we update the quantity, display it on the page instead
+of in the console. Also, display the quantity when page first loads.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart Quantity</title>
+    </head>
+    <body>
+        <button onclick="console.log(`Cart quantity: ${cart_quantity}`)">Show Quantity</button>
+
+        <button onclick="updateCartQuantity(1)">+1</button>
+        <button onclick="updateCartQuantity(2)">+2</button>
+        <button onclick="updateCartQuantity(3)">+3</button>
+        <button onclick="updateCartQuantity(4)">+4</button>
+        <button onclick="updateCartQuantity(5)">+5</button>
+
+        <button onclick="
+            cart_quantity = 0;
+            console.log('Cart was reset.');
+            how_much()
+        ">Reset Cart</button>
+
+        <button onclick="updateCartQuantity(-1)">-1</button>
+        <button onclick="updateCartQuantity(-2)">-2</button>
+        <button onclick="updateCartQuantity(-3)">-3</button>
+
+        <p class="how_much"></p>
+
+        <script>
+            let cart_quantity = 0;
+            let max = 10;
+
+            how_much()
+
+            function updateCartQuantity(amount) {
+                
+                if (cart_quantity + amount > max) {
+                    alert('The cart is full');
+                    return;
+                }
+
+                if (cart_quantity + amount < 0) {
+                    alert('Not enough items in the cart');
+                    return;
+                }
+
+                cart_quantity += amount;
+                console.log(`Cart quantity: ${cart_quantity}`);
+
+                how_much()
+            }
+
+            function how_much() {   //Recuerda, una vez creada la función hay que llamarla
+                document.querySelector('.how_much')
+                .innerHTML = `Cart quantity: ${cart_quantity}`; 
+            }
+        </script>
+
+    </body>
+</html>

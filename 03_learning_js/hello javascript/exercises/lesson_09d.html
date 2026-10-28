@@ -1,0 +1,76 @@
+<!--9j. We'll improve the calculator project.
+. Make a copy of exercise 8h.
+. Whenever we update the calculation, display it on the page instead of in the console.
+. When the page first loads, if a calculation exists in localStorage, display it on the page.-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+
+        <p class="calculation_js"></p>
+
+        <p>
+            <button onclick="updateCalculation('1')">1</button>
+            <button onclick="updateCalculation('2')">2</button>
+            <button onclick="updateCalculation('3')">3</button>
+            <button onclick="updateCalculation(' + ')">+</button>
+        </p>
+
+        <p>
+            <button onclick="updateCalculation('4')">4</button>
+            <button onclick="updateCalculation('5')">5</button>
+            <button onclick="updateCalculation('6')">6</button>
+            <button onclick="updateCalculation(' - ')">-</button>
+        </p>
+
+        <p>
+            <button onclick="updateCalculation('7')">7</button>
+            <button onclick="updateCalculation('8')">8</button>
+            <button onclick="updateCalculation('9')">9</button>
+            <button onclick="updateCalculation(' * ')">*</button>
+        </p>
+
+        <p>
+            <button onclick="updateCalculation('0')">0</button>
+            <button onclick="updateCalculation('.')">.</button>
+            <button onclick="
+                calculation = eval(calculation);
+                console.log(calculation);
+                show_calculation();
+                localStorage.setItem('calculation', calculation);
+            ">=</button>
+            <button onclick="updateCalculation(' / ')">/</button>
+        </p>
+
+        <p>
+            <button onclick="
+                calculation = '';
+                console.log('Cleared.');
+                show_calculation();
+                localStorage.setItem('calculation', calculation);
+            ">Clear</button>
+        </p>
+
+        <script>
+            let calculation = localStorage.getItem('calculation') || '';
+
+            show_calculation();
+
+            function updateCalculation(value) {
+                calculation += value;
+                console.log(calculation);
+
+                show_calculation()
+                localStorage.setItem('calculation', calculation);
+            }
+
+            function show_calculation() {
+                document.querySelector('.calculation_js').innerHTML = calculation;
+            }
+        </script>
+
+    </body>
+</html>

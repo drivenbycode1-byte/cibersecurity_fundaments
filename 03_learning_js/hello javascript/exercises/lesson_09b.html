@@ -1,0 +1,69 @@
+<!--9g. Create a file 9g.html and copy the code from 09-dom-projects.html
+into this file. In the Amazon Shipping Calculator, enter a cost of 7.99
+and click 'Calculate'. What issue do you see? Find a fix for this issue.
+
+9h. Let's create the project on the right:
+. Whenever we type in the text box, update the text on the page.
+. To do this, we'll learn another event called <input onkeyup=" ... ">.
+. This runs code after we press a key and release it (key comes up).
+-->
+
+<!DOCTYPE html>
+<html>
+    <title>DOM Proyects</title>
+    <head></head>
+    <body>
+        <p>YouTube Subscribe Button</p>
+        <button onclick="subscribe();" class="js_subcribe_button">Subscribe</button>
+
+        <p>Amazon Shipping Calculator</p>
+        <input placeholder="Cost of order" class="js_cost_input" 
+            onkeydown="handle_cost_key_down(event)"
+            onkeyup="update_text()">    
+
+        <button onclick="
+                calculate_total()
+            ">Calculate</button>
+        <p class="js_total_cost"></p>
+
+        <script>
+            function handle_cost_key_down(event) {
+                if (event.key === 'Enter') {
+                    calculate_total();
+                }
+            }
+
+            function update_text() {
+                const text = document.querySelector('.js_cost_input').value;
+                document.querySelector('.js_total_cost').innerHTML = text;
+            }
+
+            function calculate_total() {
+                const input_element = document.querySelector('.js_cost_input');
+                let cost = Number(input_element.value); 
+
+                if (cost < 40) {
+                    cost = cost + 10;
+                }
+
+                cost = Math.round(cost * 100) / 100
+
+                document.querySelector('.js_total_cost').innerHTML = `$${cost}`;
+
+                /*document.querySelector('.js_total_cost').innerHTML = `$${cost.toFixed(2)}`;*/
+            }
+
+
+            function subscribe() {
+                let button_element = document.querySelector('.js_subcribe_button'); 
+
+                if(button_element.innerHTML === 'Subscribe') {  
+                    button_element.innerHTML = 'Subscribed';
+                } else {                                        
+                    button_element.innerHTML = 'Subscribe';
+                }
+            }
+
+        </script> 
+    </body>
+</html>

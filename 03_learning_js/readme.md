@@ -86,3 +86,10 @@ DOM
 - document.innerText
 - <input>
 - .value
+- Number()
+- onkeydown=""
+- event
+- String()
+- window.
+- .toFixed(2)
+- input onkeyup=""

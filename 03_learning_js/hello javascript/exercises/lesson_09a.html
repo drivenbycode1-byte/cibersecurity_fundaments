@@ -1,0 +1,75 @@
+<!--9a. Create a <button>9a</button>. Use document.querySelector('button')
+to get the button from the page, and then display it in the console.
+
+9b. Continuing from 9a, create another button <button>9b</button>
+below. Using JavaScript, change the text in the second button to
+'9b done!' (hint: add a class and use .querySelector).
+
+9c. Create 2 buttons 'heads' and 'tails', and a paragraph (<p></p>) underneath. 
+When clicking the 'heads' button, display 'You chose: heads' in the paragraph. 
+When the 'tails' button, display 'You chose: tails'.
+
+9d. Create a text box (<input>) and a submit button. When clicking
+'Submit', display 'Your name is: ${text}' on the page (${text} = the text
+inside the text box) (hint: use .value to get the text inside an <input>).
+
+9e. Modify exercise 9d so that when you press 'Enter' in the <input>, it
+will also display the same message on the page (hint: use
+onkeydown and the event object).-->
+
+
+<!DOCTYPE html>
+<html>
+    <title></title>
+    <head></head>
+    <body>
+        <button class="btn_1">9a</button>
+        <button class="btn_2">9b</button>
+        <p></p>
+
+        <button onclick="choose('heads')">heads</button>
+        <button onclick="choose('tails')">tails</button>
+        <p class="choose"></p>
+
+        <input placeholder="Name" class="your_name" onkeydown="press_enter(event)">
+        <button class="sumbit" onclick="show_name()">Submit</button>
+        <p class="result"></p>
+
+        <script>
+            const button1 = document.querySelector('button'); //Con esto obtengo el primer elemente 'button' de HTMl.
+            console.log(button1);
+            const button2 = document.querySelector('.btn_2');
+            button2.innerHTML = '9b done!';
+
+            function choose(take) {
+                document.querySelector('.choose').innerHTML = `You chose: ${take}`;
+            }
+
+            /*function choose (take) {
+                let chossing = '';
+
+                if (take === 'heads') {
+                    chossing = 'heads'
+                } else if (take === 'tails') {
+                    chossing = 'tails'
+                }
+
+                document.querySelector('.choose').innerHTML = `You chose: ${chossing}` //Está versdión es muy larga y redundante
+            }*/
+
+            function show_name() {
+                let function_name = document.querySelector('.your_name');
+                let name = function_name.value;    
+                
+                document.querySelector('.result').innerHTML = `You name is: ${name}.`
+            }
+
+            function press_enter(event) {
+                if (event.key === 'Enter') {
+                    show_name();
+                }
+            }
+ 
+        </script>
+    </body>
+</html>

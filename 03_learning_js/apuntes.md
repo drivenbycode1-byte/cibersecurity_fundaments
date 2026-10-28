@@ -148,3 +148,8 @@ siempre va con un opunto al principio porque es un  método document.querySelect
 Dentro del textbox, cuando hay  letras grises, se llaman Place Holder (Marcador de posición)
 .value = para obtener el texto que se escribe en el TextBox
 Number() = funci'n que coinvierte un string en un número
+onkeydown = weevents listeners, chek events ans runs javascript
+click, keydowns = events
+event = dentro d un console.log nos muestra las teclas que el usuario presiona
+document.  object representa la webpage y la windows. object representa el buscador. 
+TEnemos windos.document, windos.console.log, windows.alert ==> PEERO windowsa se agrega automáticamente en JavaScript
