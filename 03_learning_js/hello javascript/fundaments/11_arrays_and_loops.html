@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/10_r_p_s.css"> <!--stylesheet le dice al atributo que queremos cargar css file-->
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="playGame('rock');" class="move_button"><img src="../images_css/rock-emoji.png" class="move_icon"></button>
+    <button onclick="playGame('paper');" class="move_button"><img src="../images_css/paper-emoji.png" class="move_icon"></button>
+    <button onclick="playGame('scissors');" class="move_button"><img src="../images_css/scissors-emoji.png" class="move_icon"></button>
+
+    <p class="js_result result"></p>
+    <p class="js_moves"></p>
+    <p class="js_score score"></p>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      update_score_element();
+    " class="reset_score_button">Reset Score</button>
+
+    <script src="scripts/10_r_p_s.js"></script>
+  </body>
+</html>
