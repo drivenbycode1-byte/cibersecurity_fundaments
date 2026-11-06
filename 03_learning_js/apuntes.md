@@ -163,3 +163,5 @@ classList = control absoluto de del atributo clase
 
 === Arrays and Loops ===
 
+Array (Vector{dirección}, matriz, orden o arreglo): Otro tipo de value, y represnta una lista de .
+Una vez creado el array, lo guardamos en una variable y dentro de una corchete ponemos 0 y nos dará el primer valor
