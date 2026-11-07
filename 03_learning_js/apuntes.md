@@ -169,4 +169,12 @@ Una vez creado el array, lo guardamos en una variable y dentro de una corchete p
 .splice(1) = con un valor, lo toma como índice y cort desde esa posición
 .splice(1, 3) = con dos valores indica donde empieza el corte y el segundo donde termina
 
-Loops = Nos deja correr código una y otra vz
+Loops = Nos deja correr código una y otra vez. Cada vex que repetimos algo se llamna iteración.
+El loop se detiene cuando es false o sea, cuando la iteracion deja de repetirse
+
+Usaremos una técnica llamada:
+Looping Trough an Array = go trough each value on a Array one by one and do something with each value
+index o índice es la posición del valor en el array/vector/orden
+
+Acumulator Pattern = combine looping trhough and array
+Render significa display aalgo en la página

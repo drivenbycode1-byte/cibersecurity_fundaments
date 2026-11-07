@@ -111,3 +111,5 @@ DOM
 - []
 - .push
 - .splice
+- while () {}
+- for () {}
