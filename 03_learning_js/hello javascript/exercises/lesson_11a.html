@@ -1,0 +1,98 @@
+<!--11a. Create an array of numbers: const nums = [10, 20, 30]; Modify the last
+value in this array and change it to 99.
+
+11b. Create a function getLastValue(array) that takes an array and returns
+the last value in the array. Hint: array indexes start at 0 so the last
+index is the number of values in the array minus 1
+(lastIndex = array.length - 1).
+. getLastValue([1, 20, 22, 24, 5]) => 5
+· getLastValue(['hi', 'hello', 'good']) => 'good'
+
+11c. Create a function arraySwap(array) that takes an array and returns an
+array where the first and last values are swapped (or switched).
+. arraySwap([1, 20, 22, 24, 5]) => [5, 20, 22, 24, 1]
+. arraySw course, 'hello', 'good']) => ['good', 'hello', 'hi']
+
+11d. Create a for loop that counts up from 0 to 10, but counts up by 2
+(0, 2, 4, ... , 8, 10).
+
+11e. Create a for loop that counts down from 5 to 0.
+
+11l. Do exercises 11d and 11e, but using while loops.
+
+11g. Create a loop that takes an array of numbers and creates a new array
+where each number is increased by 1.
+· [1, 2, 3] => [2,3, 4]
+
+11h. Create a function addOne(array) that takes an array of numbers and
+returns an array where each number is increased by 1.
+· addOne([1, 2, 3]) => [2,3, 4]
+. addOne([-2, -1, 0, 99]) => [-1, 0, 1, 100]-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lesson 11</title>
+    </head>
+    <body>
+        <script>
+            const nums = [10, 20, 30];
+            nums[2] = 99
+            console.log(nums)
+
+            let nums1 = [1, 20, 22, 24, 5];
+            let string1 = ['hi', 'hello', 'good'];
+
+            function get_last_value(array) {       // OJO con esta función. Esto solo muestra un valor, no lo devuelve y no ss epued usar resultado en otras operaciones.  
+                last_index = array.length - 1;
+                console.log(array[last_index]);
+            }
+
+            get_last_value(nums1)
+
+            function get_last_value2(last) {
+                last_index = last.length - 1;
+                return last[last_index];
+            }
+
+            console.log(get_last_value2(nums1))
+
+            function get_last_value3(value) {
+                return value[value.length - 1];
+            }
+
+            console.log(get_last_value3(nums1))
+
+            function array_swap(array) {
+                let first = array[0];
+                array[0] = array[array.length - 1];
+                array[array.length - 1] = first;
+                return array;
+            }
+
+            console.log(array_swap(string1))
+            
+            for (let i = 0; i <= 10; i = i + 2) {
+                console.log(i)
+            }
+
+            for (let i = 5; i >= 0; i = i - 1) {
+                console.log(i)
+            }
+
+            let i = 0
+            while (i <= 10) {
+                console.log(i);
+                i = i + 2;
+            }
+
+            let_1 = 5
+            while (let_1 >= 0) {
+                console.log(let_1);
+                let_1 = let_1 - 1;
+            }
+
+            
+        </script> 
+    </body>
+</html>
