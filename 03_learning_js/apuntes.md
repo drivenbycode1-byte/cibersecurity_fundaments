@@ -166,4 +166,7 @@ classList = control absoluto de del atributo clase
 Array (Vector{dirección}, matriz, orden o arreglo): Otro tipo de value, y represnta una lista de .
 Una vez creado el array, lo guardamos en una variable y dentro de una corchete ponemos 0 y nos dará el primer valor
 .push = agrega una valor al final del array
-.splice(0, 1) = 
+.splice(1) = con un valor, lo toma como índice y cort desde esa posición
+.splice(1, 3) = con dos valores indica donde empieza el corte y el segundo donde termina
+
+Loops = Nos deja correr código una y otra vz
