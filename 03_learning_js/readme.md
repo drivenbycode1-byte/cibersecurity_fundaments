@@ -109,3 +109,5 @@ DOM
 === Arrays and Loops ===
 
 - []
+- .push
+- .splice
