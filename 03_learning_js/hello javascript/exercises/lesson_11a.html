@@ -92,7 +92,28 @@ returns an array where each number is increased by 1.
                 let_1 = let_1 - 1;
             }
 
+            let increase = [5, 6, 7]
+            let total = []
+            for (let i = 0; i < increase.length; i++) {
+                let num = increase[i]
+                total.push(num + 1)
+            }
+            console.log(total)
+
+            let increase1 = [1, 2, 3]
+            let increase2 = [-2, -1, 0, 99]
             
+            function add_one(array) {
+                let total2 = []
+                for (let i = 0; i < array.length; i++) {
+                    let num = array[i]
+                    total2.push(num + 1)
+                }
+                return total2
+            }
+
+            console.log(add_one(increase1))
+            console.log(add_one(increase2))
         </script> 
     </body>
 </html>
