@@ -163,6 +163,22 @@ and returns how many numbers in the array are greater than O.
 
             console.log(add_arrays(ar1, ar2))
             console.log(add_arrays(ar3, ar4))
+
+            let greater1 = [1, -2, 5]
+            let greater2 = [-2, 3, -5, 7, 10]
+
+            function count_positive(nums) {
+                let total = 0;
+                for (let i = 0; i < nums.length; i++) {
+                    if (nums[i] > 0) {
+                        total += 1
+                    }                
+                }
+                return total
+            }
+
+            console.log(count_positive(greater1))
+            console.log(count_positive(greater2))
             
         </script> 
     </body>
