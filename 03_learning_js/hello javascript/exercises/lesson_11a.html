@@ -43,7 +43,23 @@ numbers and adds each number in the arrays together.
 11k. Create a function countPositive(nums) that takes an array of numbers
 and returns how many numbers in the array are greater than O.
 . countPositive([1, -3, 5]) => 2
-. countPositive([-2, 3, -5, 7, 10]) => 3-->
+. countPositive([-2, 3, -5, 7, 10]) => 3
+
+11l. Create a function minMax(nums) that takes an array of numbers and
+returns an object with the minimum and maximum numbers in the
+array (do this using a loop instead of using something like Math.min).
+· minMax([1, -3, 5]) => { min: -3, max: 5 }
+. minMax([-2, 3, -5, 7, 10]) => { min: -5, max: 10 } 
+
+11m. Update exercise 11l to also handle these cases:
+· minMax([ ]) => { min: null, max: null }
+· minMax([3]) => { min: 3, max: 3 }
+
+11n. Create a function countWords(words) that takes an array of strings
+and returns an object with how many times each string appeared.
+. countWords(['apple', 'grape', 'apple', 'apple']) => { apple: 3, grape: 1}
+(Hint: you can access a property using a variable: object[variable];
+This uses the value inside the variable as the property name).-->
 
 <!DOCTYPE html>
 <html>
@@ -179,7 +195,59 @@ and returns how many numbers in the array are greater than O.
 
             console.log(count_positive(greater1))
             console.log(count_positive(greater2))
-            
+
+            let greater3 = [1, -2, 5]
+            let greater4 = [-2, 3, -5, 7, 10]
+            let greater5 = []
+            let greater6 = [3]
+
+            function min_max(nums) {
+                    if (nums.length === 0) {
+                        return {
+                            min: null,
+                            max: null
+                        };
+                    };
+
+                let min = nums[0];
+                let max = nums[0];
+                    
+                for (let i = 0; i < nums.length; i++) {
+                    if (nums[i] < min) {
+                        min = nums[i];
+                    }
+                    if (nums[i] > max) {
+                        max = nums[i];
+                    }
+                };
+                return {
+                    min: min,
+                    max: max
+                };
+            }
+
+            console.log(min_max(greater3))
+            console.log(min_max(greater4))
+            console.log(min_max(greater5))
+            console.log(min_max(greater6))
+
+            let words = ['apple', 'grape', 'apple', 'apple']
+
+            function count_words(words) {
+                let resultado = {}
+                
+                for (let i = 0; i < words.length; i++) {
+                    let word = words[i]
+                    if ( resultado[word] === undefined) {
+                        resultado[word] = 1;
+                    } else {
+                        resultado[word] += 1;
+                    }
+                }
+                return resultado;
+            }
+
+            console.log(count_words(words))
         </script> 
     </body>
 </html>
