@@ -178,3 +178,10 @@ index o índice es la posición del valor en el array/vector/orden
 
 Acumulator Pattern = combine looping trhough and array
 Render significa display aalgo en la página
+
+destructuring = es para realizar un shortcut, ejemplo:
+const name = todoObject.name; === const { name } = todoObject;
+
+.slice = no altera el slice, pero si devuelve el modificado
+
+remainder operator = podemos calcular lo que queda, el resto, después de una división con el %

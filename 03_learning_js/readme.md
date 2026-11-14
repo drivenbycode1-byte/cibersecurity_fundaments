@@ -111,5 +111,9 @@ DOM
 - []
 - .push
 - .splice
+- .slice
 - while () {}
 - for () {}
+- <input type="text/date">
+- break
+- continue

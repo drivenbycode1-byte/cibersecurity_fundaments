@@ -231,20 +231,20 @@ This uses the value inside the variable as the property name).-->
             console.log(min_max(greater5))
             console.log(min_max(greater6))
 
-            let words = ['apple', 'grape', 'apple', 'apple']
+            let words = ['apple', 'grape', 'apple', 'apple'] //array que le damos con sus variables
 
-            function count_words(words) {
-                let resultado = {}
+            function count_words(words) { // esta función queremos convertir , más bien saber cuantas veces se repiten esas variables o valores del array
+                let resultado = {} // creamos el objeto
                 
-                for (let i = 0; i < words.length; i++) {
-                    let word = words[i]
-                    if ( resultado[word] === undefined) {
+                for (let i = 0; i < words.length; i++) { //avanzamos a través del bucle por todo el array hasta terminarlo
+                    let word = words[i] //creamos una variable que contiene los índices [i] del array y 'word' es el valor almacenado en ese índice.
+                    if ( resultado[word] === undefined) {  //si la propiedad creada desde el array no está, se crea con el = 1
                         resultado[word] = 1;
                     } else {
-                        resultado[word] += 1;
+                        resultado[word] += 1; //mientras que si existe se suma
                     }
                 }
-                return resultado;
+                return resultado; //devolvemos el objeto poara utiliarlo
             }
 
             console.log(count_words(words))
