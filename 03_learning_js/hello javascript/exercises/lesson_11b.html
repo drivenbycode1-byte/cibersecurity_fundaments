@@ -26,7 +26,15 @@ skip it. If it's not 'egg', add it to the result).
 11t. Arrays have a method called .reverse(), which reverses the order of
 the values in the array. Using .reverse(), update exercise 11s to only
 remove the last 2 eggs from the array.
-· removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']) => ['egg', 'apple', 'ham']-->
+· removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']) => ['egg', 'apple', 'ham']
+
+11u. In exercise 11t, one problem with .reverse() is that it doesn't create a
+copy of the array it is reversing. It modifies the original array. Update
+the code so the function does not modify the original array. (Hint:
+use the .slice() method to create a copy of an array's values).
+. const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+. console.log(removeEgg(foods)) => ['egg', 'apple', 'ham']
+. console.log(foods) => ['egg', 'apple', 'egg', 'egg', 'ham']-->
 
 <!DOCTYPE html>
 <html>
@@ -113,6 +121,67 @@ remove the last 2 eggs from the array.
             };
 
             console.log(find_index1(array5, 'red'))
+
+            let foods = ['egg', 'apple', 'egg', 'egg', 'ham']
+
+            function remove_egg(foods) {
+                result = [];
+                for (i = 0; i < foods.length; i++) {
+                    if (foods[i] === 'egg') {
+                        continue;
+                    } else if (foods[i] !== 'egg') {
+                        result.push(foods[i]);
+                    }
+                }
+                return result
+            };
+
+            console.log(remove_egg(foods))
+
+            function remove_egg1(foods) {
+                let result = [];
+                let egg = 0
+                for (i = 0; i < foods.length; i++) {
+                    if (foods[i] === 'egg' && egg < 2) {
+                        egg++
+                        continue;
+                    } else {                        
+                        result.push(foods[i]);
+                    }
+                }
+                return result
+            };
+
+            console.log(remove_egg1(foods))
+
+            foods.reverse()
+
+            console.log(remove_egg1(foods))
+
+            function remove_egg2(foods) {
+                let result = [];
+                let egg = 0
+                for (i = 0; i < foods.length; i++) {
+                    if (foods[i] === 'egg' && egg < 2) {
+                        egg++
+                        continue;
+                    } else {                        
+                        result.push(foods[i]);
+                    }
+                }
+                result.reverse()
+                return result
+            };
+
+            console.log(remove_egg2(foods))
+            
+            let copy_foods = foods.slice()
+
+            console.log(foods)
+
+            copy_foods2 = copy_foods.reverse()
+
+            console.log(copy_foods2) // que este vendría siendo el foods original
 
         </script> 
     </body>
