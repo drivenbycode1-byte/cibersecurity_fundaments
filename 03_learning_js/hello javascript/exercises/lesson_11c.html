@@ -35,12 +35,24 @@ no duplicates). Try to use the findlndex() function in your solution.
 
             function find_index(array, word) { 
                 result = -1;
-                for (i = 0; i < array.length; i++) {
+                for (let i = 0; i < array.length; i++) {
                     if (array[i] === word) {
-                        result = i
+                        result = i;
+                        break;
                     }
-                } return result
+                }
+                return result;
             };
+
+            function unique(array) {
+                let result = [];
+                for (let i = 0; i < array.length; i++) {
+                    if (find_index(result, array[i]) === -1) {
+                        result.push(array[i]);
+                    }
+                }
+                return result;
+            }
         </script> 
     </body>
 </html>
