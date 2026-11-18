@@ -47,6 +47,21 @@
       setInterval(function() { // esta función mantiene corriendo el código cada 5 segundos
         console.log('interval');
       }, 3000);
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value, index) {
+        if (value === 'wash dishes') {
+          return; // Este return termina la función temprano y continua a la siguiente función. Hace lo mismo qu un continue en for loop
+        }
+        console.log(value);
+        console.log(index);
+      });  // forEach toma todos los valores del parámetro value, en este caso.
+      // también podemos darle a esta función un segundo parámetro que nos de los índices
+
+
     </script>
   </body>
 </html>

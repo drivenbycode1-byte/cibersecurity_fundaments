@@ -121,3 +121,5 @@ Advanced Functions
 - Anonymous Function
 - setTimeout()
 - setInterval()
+- clearInterval()
+- forEach
