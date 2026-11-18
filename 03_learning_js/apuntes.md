@@ -185,3 +185,9 @@ const name = todoObject.name; === const { name } = todoObject;
 .slice = no altera el slice, pero si devuelve el modificado
 
 remainder operator = podemos calcular lo que queda, el resto, después de una división con el %
+
+
+=== Advanced Functions ===
+
+Anonymous function = es una función sin un nombre
+Hoisting = Significa que podemos llamar a la función antes de crear el código

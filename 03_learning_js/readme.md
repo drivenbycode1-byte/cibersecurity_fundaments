@@ -94,7 +94,7 @@ DOM
 - .toFixed(2)
 - input onkeyup=""
 
-=== DOM with CSS, HTML & JS ===
+DOM with CSS, HTML & JS
 - <style></style>
 - .classList.add
 - .classList.remove
@@ -106,8 +106,7 @@ DOM
 - <link>
 - <input>
 
-=== Arrays and Loops ===
-
+Arrays and Loops
 - []
 - .push
 - .splice
@@ -117,3 +116,8 @@ DOM
 - <input type="text/date">
 - break
 - continue
+
+Advanced Functions
+- Anonymous Function
+- setTimeout()
+- setInterval()
